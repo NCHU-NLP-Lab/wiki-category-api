@@ -11,7 +11,7 @@ app = Flask(__name__)
 load_dotenv()
 
 # connect to Elasticsearch DB
-es = Elasticsearch(os.environ["ESURL"], connection_class=RequestsHttpConnection, use_ssl=True,
+es = Elasticsearch(os.getenv('ESURL'), connection_class=RequestsHttpConnection, use_ssl=True,
                    verify_certs=False, max_retries=5, retry_on_timeout=True, send_get_body_as='POST')
 requests.packages.urllib3.disable_warnings()
 
