@@ -1,4 +1,5 @@
 /data
+/venv
 test.py
 extract.txt
 log.txt
